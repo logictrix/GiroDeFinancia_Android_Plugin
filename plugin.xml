@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.giro.plugin" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>GiroDeFinancia</name><js-module name="GiroDeFinancia" src="www/GiroDeFinancia.js">
+	<clobbers target="cordova.plugins.GiroDeFinancia" /></js-module>
+		<platform name="android"><config-file parent="/*" target="res/xml/config.xml">
+
+			<feature name="GiroDeFinancia">
+
+			<param name="android-package" value="com.giro.plugin.GiroDeFinancia" />
+
+			</feature>
+
+			</config-file>
+			
+			
+			
+			
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+	
+         <activity android:label="LuncherActivity" android:name="com.giro.plugin.LuncherActivity"/>
+			
+		<activity android:name="com.acuant.mobilesdk.detect.PDF417.CameraPDF417" />
+        <activity android:name="com.acuant.mobilesdk.detect.CameraCardDetectManual" />
+        <activity android:name="com.acuant.mobilesdk.detect.Camera2CardDetectManual" />
+        <activity android:name="com.acuant.mobilesdk.detect.Camera2FacialRecognitionManual" />
+
+			 
+        </config-file>		
+		
+		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+			
+		<source-file src="src/android/GiroDeFinancia.java" target-dir="src/com/giro/plugin/GiroDeFinancia" />	
+			
+		<source-file src="src/android/LuncherActivity.java" target-dir="src/com/giro/plugin/GiroDeFinancia" />
+		
+        <source-file src="src/android/activity_luncher.xml" target-dir="res/layout"/>
+			
+	 
+		
+        <lib-file src="src/android/kyc.aar"/>
+		
+        <lib-file src="src/android/libScanovateImagingHybridLiveness_4_1_0.aar"/>
+		
+		<lib-file src="src/android/scanovate_colombia.aar"/>
+		
+        <framework src="src/android/gradle.xml" custom="true" type="gradleReference" />
+		
+		
+		<resource-file src="src/android/res/drawable/gyf_logo.png" target="res/drawable/gyf_logo.png" />
+		<resource-file src="src/android/res/drawable-mdpi/gyf_logo.png" target="res/drawable-mdpi/gyf_logo.png" />
+		<resource-file src="src/android/res/drawable-xhdpi/gyf_logo.png" target="res/drawable-xhdpi/gyf_logo.png" />
+		<resource-file src="src/android/res/drawable-xxhdpi/gyf_logo.png" target="res/drawable-xxhdpi/gyf_logo.png" />
+			
+		</platform>
+</plugin>

@@ -1,0 +1,17 @@
+{
+  "name": "GiroDeFinancia",
+  "version": "1.0.0",
+  "description": "androidPlugin",
+  "cordova": {
+    "id": "com.giro.plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "logictrix",
+  "license": "ISC"
+}
